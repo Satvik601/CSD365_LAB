@@ -46,3 +46,18 @@ if len(solution.t_events[0]) > 0:
     print(f"Interception time: {hit_time:.2f} seconds")
 else:
     print("No interception within 300 seconds.")
+
+
+
+plt.figure(figsize=(9, 5))
+
+plt.plot(solution.t, solution.y[0], label="Distance R")
+plt.axhline(0, linestyle="--", color="black")
+
+plt.xlabel("Time (seconds)")
+plt.ylabel("Distance between aircraft (metres)")
+plt.title("Pure Pursuit: Distance vs Time")
+plt.grid(True)
+plt.legend()
+plt.tight_layout()
+plt.show()
